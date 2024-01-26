@@ -7,7 +7,7 @@ class Model_center():
     """
     存储检索问答链的对象 
     """
-    def __init__(self, base_model_dir = '~/.cache/model/internlm', adapter_dir = '~/.cache/model/adapter', megered_dir = '~/.cache/model/merged'):
+    def __init__(self, base_model_dir = '/model/internlm', adapter_dir = '/model/adapter', megered_dir = '/model/merged'):
         
         self.base_model_dir = base_model_dir
         self.adapter_dir = adapter_dir
