@@ -7,11 +7,13 @@ class Model_center():
     """
     存储检索问答链的对象 
     """
-    def __init__(self, base_model_dir = '/model/internlm', adapter_dir = '/model/adapter', megered_dir = '/model/merged'):
+    def __init__(self, base_model_dir = 'model/internlm', 
+                 adapter_dir = 'model/adapter', 
+                 megered_dir = 'model/merged'):
         
-        self.base_model_dir = base_model_dir
-        self.adapter_dir = adapter_dir
-        self.megered_dir = megered_dir
+        self.base_model_dir = os.path.join(os.path.expanduser("~"), base_model_dir)
+        self.adapter_dir = os.path.join(os.path.expanduser("~"), adapter_dir)
+        self.megered_dir = os.path.join(os.path.expanduser("~"), megered_dir)
         # 加载模型
         self.load_model()
 
